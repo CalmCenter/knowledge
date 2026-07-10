@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  line-height: 1.72;
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.muted,
+.subtitle {
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.sidebar,
+.list,
+.detail {
+  scrollbar-color: #cbd5e1 transparent;
+  scrollbar-width: thin;
+}
+
+.sidebar::-webkit-scrollbar,
+.list::-webkit-scrollbar,
+.detail::-webkit-scrollbar,
+.topic-list::-webkit-scrollbar,
+.category-list::-webkit-scrollbar,
+.md-table-wrap::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.sidebar::-webkit-scrollbar-thumb,
+.list::-webkit-scrollbar-thumb,
+.detail::-webkit-scrollbar-thumb,
+.topic-list::-webkit-scrollbar-thumb,
+.category-list::-webkit-scrollbar-thumb,
+.md-table-wrap::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+.sidebar::-webkit-scrollbar-track,
+.list::-webkit-scrollbar-track,
+.detail::-webkit-scrollbar-track,
+.topic-list::-webkit-scrollbar-track,
+.category-list::-webkit-scrollbar-track,
+.md-table-wrap::-webkit-scrollbar-track {
+  background: transparent;
+}

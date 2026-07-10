@@ -1,0 +1,34 @@
+:root {
+  --color-bg: #f5f6f8;
+  --color-panel: #ffffff;
+  --color-text: #20242a;
+  --color-muted: #697386;
+  --color-subtle: #f8fafc;
+  --color-line: #e4e8ef;
+  --color-line-strong: #d6dde8;
+  --color-brand: #2563eb;
+  --color-brand-strong: #1d4ed8;
+  --color-brand-muted: #dbe7ff;
+  --color-brand-soft: #f3f7ff;
+  --color-success: #0f766e;
+  --shadow-panel: 0 8px 22px rgba(20, 28, 40, 0.06);
+  --shadow-soft: 0 4px 14px rgba(20, 28, 40, 0.04);
+
+  --font-sans: "PingFang SC", "Microsoft YaHei", "HarmonyOS Sans", system-ui, sans-serif;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  --radius-card: 8px;
+  --content-max: 800px;
+  --page-max: 1440px;
+  --header-offset: 102px;
+  --reader-font-size: 16px;
+  --reader-line-height: 1.76;
+  --reader-paragraph-gap: 16px;
+}
