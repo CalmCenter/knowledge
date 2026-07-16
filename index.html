@@ -3,66 +3,73 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>qifan 本地知识库</title>
+  <meta name="theme-color" content="#f3f6f4">
+  <title>qifan 知识库</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-  <header>
-    <div class="topbar">
-      <div>
-        <h1>qifan 本地知识库</h1>
-        <div class="subtitle">按知识库分类沉淀内容：读书知识、饭局社交攻略，以及后续可扩展的新分类。</div>
-      </div>
-      <input id="search" class="search" type="search" placeholder="搜索标题、分类、主题、场景、话术、概念、行动建议或复习题">
+<body class="home-view">
+  <header class="site-header">
+    <div class="site-nav">
+      <button class="brand" id="brandHome" type="button" aria-label="返回知识库首页">
+        <span class="brand-mark" aria-hidden="true">▦</span>
+        <span>qifan 知识库</span>
+      </button>
+      <nav class="top-links" id="topCategories" aria-label="知识库分类">
+        <button class="nav-search" id="navSearch" type="button" aria-label="搜索">⌕</button>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <aside class="focus-rail" aria-label="专注阅读摘要">
-      <button id="railToggle" class="rail-toggle" type="button">展开</button>
-      <div class="rail-item">
-        <span class="rail-value" id="railNoteCount">0</span>
-        <span class="rail-label">卡片</span>
-      </div>
-      <div class="rail-item">
-        <span class="rail-value" id="railTopicCount">0</span>
-        <span class="rail-label">主题</span>
-      </div>
-      <div class="rail-item">
-        <span class="rail-value" id="railCategory">全部</span>
-        <span class="rail-label">分类</span>
-      </div>
-      <div class="rail-item">
-        <span class="rail-value" id="railOrder">---</span>
-        <span class="rail-label">当前</span>
-      </div>
-    </aside>
-
-    <aside class="panel sidebar">
-      <div class="stat-grid">
-        <div class="stat">
-          <strong id="noteCount">0</strong>
-          <span class="muted">卡片总数</span>
-        </div>
-        <div class="stat">
-          <strong id="topicCount">0</strong>
-          <span class="muted">主题</span>
+  <main class="home" id="homeView">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span><strong id="heroStats">正在整理知识...</strong></div>
+        <h1>把零散资料，<br><em>整理成可复用的知识</em></h1>
+        <p>阅读、沟通、社交与历史。把资料变成随时可查、能够行动、值得反复阅读的个人知识系统。</p>
+        <div class="hero-actions">
+          <button class="primary-action" id="continueReading" type="button">继续上次阅读 <span>→</span></button>
         </div>
       </div>
-      <div class="section-title">知识库分类</div>
-      <div id="categories" class="category-list"></div>
-      <div class="section-title">主题筛选</div>
-      <div id="topics" class="topic-list"></div>
-    </aside>
-
-    <section class="panel list">
-      <div id="cards"></div>
     </section>
 
-    <article class="panel detail">
-      <div id="detail"></div>
+    <section class="home-section">
+      <div class="section-heading category-heading"><div><h2>知识分类</h2></div><p>选择一个分类，继续上次停留的位置。</p></div>
+      <div class="category-grid" id="homeCategories"></div>
+    </section>
+  </main>
+
+  <main class="reader-shell" id="readerView" aria-hidden="true">
+    <aside class="chapter-nav">
+      <div class="chapter-tools">
+        <button class="back-home" id="backHome" type="button">← 首页</button>
+        <label class="chapter-search"><span>⌕</span><input id="readerSearch" type="search" placeholder="搜索文章"></label>
+      </div>
+      <div class="chapter-tree" id="chapterTree"></div>
+    </aside>
+
+    <article class="reader-panel">
+      <div class="mobile-reader-bar"><button id="mobileBack" type="button">← 文章</button></div>
+      <div class="document-window">
+        <div class="document" id="detail"></div>
+      </div>
     </article>
   </main>
+
+  <div class="search-modal" id="searchModal" aria-hidden="true">
+    <button class="search-backdrop" id="searchBackdrop" type="button" aria-label="关闭搜索"></button>
+    <div class="search-dialog" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+      <div class="search-dialog-header">
+        <div><span>SEARCH</span><h2 id="searchTitle">搜索知识库</h2></div>
+        <button class="search-close" id="searchClose" type="button" aria-label="关闭搜索">×</button>
+      </div>
+      <label class="home-search">
+        <span>⌕</span>
+        <input id="homeSearch" type="search" placeholder="搜索知识、人物、主题、标签或方法..." autocomplete="off">
+        <kbd>Enter</kbd>
+      </label>
+      <p class="search-hint">输入关键词后按 Enter，直接进入匹配内容。</p>
+    </div>
+  </div>
 
   <script src="assets/js/data.js"></script>
   <script src="assets/js/app.js"></script>

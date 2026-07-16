@@ -63,3 +63,36 @@ h1 {
 .md-table-wrap::-webkit-scrollbar-track {
   background: transparent;
 }
+
+.chapter-nav,
+.reader-panel {
+  scrollbar-color: transparent transparent;
+  scrollbar-width: thin;
+}
+
+.chapter-nav:hover,
+.reader-panel:hover {
+  scrollbar-color: #b8c1bb transparent;
+}
+
+.chapter-nav::-webkit-scrollbar,
+.reader-panel::-webkit-scrollbar {
+  width: 5px;
+}
+
+.chapter-nav::-webkit-scrollbar-track,
+.reader-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chapter-nav::-webkit-scrollbar-thumb,
+.reader-panel::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: transparent;
+  transition: background-color 180ms ease;
+}
+
+.chapter-nav:hover::-webkit-scrollbar-thumb,
+.reader-panel:hover::-webkit-scrollbar-thumb {
+  background: #b8c1bb;
+}
